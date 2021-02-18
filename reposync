@@ -1,10 +1,6 @@
-$ for repo in \
+for repo in \
     rhel-8-for-x86_64-baseos-rpms \
-    rhel-8-for-x86_64-appstream-rpms \
-    rhv-4-mgmt-agent-for-rhel-8-x86_64-rpms \
-    fast-datapath-for-rhel-8-x86_64-rpms \
-    ansible-2.9-for-rhel-8-x86_64-rpms \
-    advanced-virt-for-rhel-8-x86_64-rpms
+    rhel-8-for-x86_64-appstream-rpms
 do
   reposync --gpgcheck -lm --repoid=${repo} --download_path=/repos
   createrepo -v /repos/${repo} -o /repos/${repo} 
