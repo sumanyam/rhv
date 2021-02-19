@@ -1,0 +1,3 @@
+dnf module -y enable pki-deps
+dnf module -y enable postgresql:12
+dnf distro-sync --nobest
